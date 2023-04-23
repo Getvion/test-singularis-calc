@@ -1,3 +1,5 @@
+import { FC } from 'react';
+
 interface IProps {
   label: string;
   type: 'text' | 'number';
@@ -6,11 +8,9 @@ interface IProps {
   onChange: (e: string) => void;
 }
 
-export const Input: React.FC<IProps> = ({ label, type, required, defaultValue, onChange }) => {
+export const Input: FC<IProps> = ({ label, type, required, defaultValue, onChange }) => {
   const onValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e);
-
-    onchange(e.target.value);
+    onChange(e.target.value);
   };
 
   return (
