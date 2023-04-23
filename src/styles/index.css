@@ -1,5 +1,7 @@
 @import url('modern-normalize/modern-normalize.css');
 @import url('./button.css');
+@import url('./input.css');
+@import url('./userForm.css');
 
 *,
 *::after,
@@ -7,4 +9,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.app {
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 100px 0 50px;
 }

@@ -1,0 +1,26 @@
+.label {
+  display: block;
+  margin: 10px 0;
+}
+
+.input {
+  margin-left: 5px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 4px 8px;
+  width: 100%;
+}
+
+.input.long {
+  max-width: 200px;
+}
+
+.input.short {
+  max-width: 80px;
+}
+
+.error {
+  font-weight: 800;
+  font-size: 14px;
+  color: red;
+}
