@@ -1,7 +1,16 @@
-import { Button } from './components/ui';
+import { useState } from 'react';
 
-export const App = () => (
-  <div>
-    <Button onClick={() => console.log('click')} disabled={false} text='Сохранить' />
-  </div>
-);
+import { UserForm, UsersList } from './components';
+
+import { Users } from './@types/interface';
+
+export const App = () => {
+  const [users, setUsers] = useState<Users>([]);
+
+  return (
+    <div className='app'>
+      <UserForm users={users} setUsers={setUsers} />
+      <UsersList items={users} />
+    </div>
+  );
+};
