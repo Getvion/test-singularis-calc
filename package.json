@@ -1,13 +1,15 @@
 {
   "name": "singularis-test",
   "private": true,
+  "homepage": "https://getvion.github.io/test-singularis-calc/",
   "version": "0.0.0",
   "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^1.3.6",

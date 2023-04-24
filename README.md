@@ -1,6 +1,6 @@
-# [Singularis Calculator Test App]()
+# [Singularis Calculator Test App](https://getvion.github.io/test-singularis-calc/)
 
-![preview-screenshot](./src/assets/images/preview-screenshot.png)
+![preview-screenshot](./public/preview-screenshot.png)
 
 ---
 
