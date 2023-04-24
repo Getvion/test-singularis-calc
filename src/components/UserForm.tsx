@@ -3,7 +3,7 @@ import { Dispatch, FC, SetStateAction, useState } from 'react';
 import { IUser, Users } from '../@types/user';
 
 import { Button, DatePicker, Input } from './ui';
-import { validateUserForm } from '../utils';
+import { calcSalaryPerHour, validateUserForm } from '../utils';
 import { FormSubmitType } from '../@types/ServiceTypes';
 
 interface IProps {
@@ -27,7 +27,7 @@ export const UserForm: FC<IProps> = ({ users, setUsers }) => {
   const [errorMessage, setErrorMessage] = useState('');
   const [userData, setUserData] = useState<IUser>(defaultUserValues);
 
-  const onFormSubmit = (e: FormSubmitType) => {
+  const onFormSubmit = async (e: FormSubmitType) => {
     e.preventDefault();
     const isFormValid = validateUserForm(userData);
 
@@ -36,8 +36,15 @@ export const UserForm: FC<IProps> = ({ users, setUsers }) => {
       return;
     }
 
-    setUsers([...users, userData]);
+    setUsers([
+      ...users,
+      {
+        ...userData,
+        salaryPerHour: await calcSalaryPerHour(userData)
+      }
+    ]);
     setUserData(defaultUserValues);
+    setErrorMessage('');
   };
 
   return (

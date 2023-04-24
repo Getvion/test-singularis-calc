@@ -23,7 +23,7 @@ export const UsersList: FC<IProps> = ({ users }) => (
         </p>
         <p className='user__field'>{user.hoursPerDay}</p>
         <p className='user__field'>{user.salary}</p>
-        <p className='user__field'>{user.salaryPerHour}</p>
+        <p className='user__field'>{user.salaryPerHour.toFixed(2)}</p>
       </div>
     ))}
   </div>

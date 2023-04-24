@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction, useState } from 'react';
+import { Dispatch, FC, SetStateAction } from 'react';
 
 import Select from 'react-select';
 import { Input } from './Input';
@@ -26,7 +26,6 @@ export const DatePicker: FC<IProps> = ({ data, setData }) => {
   ];
 
   const thisMonth = new Date().getMonth();
-  const [selectedMonth, setSelectedMonth] = useState(monthes[thisMonth]);
 
   return (
     <div className='form__date-picker'>
@@ -39,8 +38,8 @@ export const DatePicker: FC<IProps> = ({ data, setData }) => {
       />
       <Select
         className='form__select'
-        defaultValue={selectedMonth}
-        onChange={(data) => (data ? setSelectedMonth(data) : null)}
+        defaultValue={monthes[thisMonth]}
+        onChange={(monthData) => (monthData ? setData({ ...data, month: monthData.value }) : null)}
         options={monthes}
       />
     </div>

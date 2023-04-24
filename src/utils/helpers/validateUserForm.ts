@@ -7,8 +7,7 @@ export const validateUserForm = (formData: IUser): boolean => {
   if (!name.length) return false;
   if (salary < 0) return false;
 
-  const thisYear = new Date().getFullYear();
-  if (year < 0 || year > thisYear) return false;
+  if (year < 0 || year < 1000) return false;
 
   return true;
 };
