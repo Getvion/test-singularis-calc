@@ -1,0 +1,27 @@
+.users {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.users__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.table__header {
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+
+.user {
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.user__field {
+  width: 100%;
+}

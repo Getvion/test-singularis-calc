@@ -10,7 +10,7 @@ export const App = () => {
   return (
     <div className='app'>
       <UserForm users={users} setUsers={setUsers} />
-      <UsersList items={users} />
+      <UsersList users={users} />
     </div>
   );
 };
