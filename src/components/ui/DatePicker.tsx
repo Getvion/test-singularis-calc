@@ -2,7 +2,7 @@ import { Dispatch, FC, SetStateAction, useState } from 'react';
 
 import Select from 'react-select';
 import { Input } from './Input';
-import { IUser } from '../../@types/interface';
+import { IUser } from '../../@types/user';
 
 interface IProps {
   data: IUser;
@@ -31,12 +31,14 @@ export const DatePicker: FC<IProps> = ({ data, setData }) => {
   return (
     <div className='form__date-picker'>
       <Input
+        defaultValue={data.year}
         label='Год'
         type='number'
         required={false}
         onChange={(value) => setData({ ...data, year: Number(value) })}
       />
       <Select
+        className='form__select'
         defaultValue={selectedMonth}
         onChange={(data) => (data ? setSelectedMonth(data) : null)}
         options={monthes}
