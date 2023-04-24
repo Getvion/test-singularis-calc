@@ -4,3 +4,13 @@
   border-radius: 16px;
   border: 2px solid rgb(0, 0, 0);
 }
+
+.form__error {
+  font-weight: 800;
+  color: red;
+  margin: 10px 0px;
+}
+
+.form__select {
+  margin: 10px 0;
+}

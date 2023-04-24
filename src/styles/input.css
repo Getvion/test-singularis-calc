@@ -18,9 +18,3 @@
 .input.short {
   max-width: 80px;
 }
-
-.error {
-  font-weight: 800;
-  font-size: 14px;
-  color: red;
-}
